@@ -7,6 +7,7 @@ import { CalendarModule } from 'angular-calendar';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SampleComponent } from './components/sample/sample.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SampleComponent } from './components/sample/sample.component';
     BrowserModule,
     HttpClientModule,
     CalendarModule.forRoot(),
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    BrowserAnimationsModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],

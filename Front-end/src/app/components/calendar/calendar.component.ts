@@ -27,6 +27,11 @@ export class CalendarComponent implements OnInit {
         this.fetchEvents();
     }
 
+    setView(view: string): void {
+        this.view = view;
+        this.fetchEvents();
+    }
+
     fetchEvents(): void {
         const apiUrl = 'https://api.themoviedb.org/3/discover/movie';
 
@@ -76,10 +81,7 @@ export class CalendarComponent implements OnInit {
         { date, events }: { date: Date, events: Array<CalendarEvent<{ film: Film }>> }
     ): void {
         if (isSameMonth(date, this.viewDate)) {
-            if (
-                (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-                events.length === 0
-            ) {
+            if ((isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) || events.length === 0) {
                 this.activeDayIsOpen = false;
             } else {
                 this.activeDayIsOpen = true;

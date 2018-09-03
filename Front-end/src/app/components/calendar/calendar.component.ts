@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Film } from './../../shared/model/film';
 import { CalendarEvent } from 'angular-calendar';
@@ -7,7 +7,7 @@ import { startOfMonth, startOfWeek, startOfDay, endOfMonth, endOfWeek, endOfDay,
 import { map } from 'rxjs/operators';
 import { colors } from './../../shared/utils/colors';
 import { ChangeDetectionStrategy } from '@angular/core';
-import {} from '@'
+
 @Component({
     selector: 'app-calendar',
     templateUrl: './calendar.component.html',
@@ -94,5 +94,10 @@ export class CalendarComponent implements OnInit {
             '_blank'
         );
     }
+    @Input() locale: string = 'en';
+
+    @Output() viewChange: EventEmitter<string> = new EventEmitter();
+
+    @Output() viewDateChange: EventEmitter<Date> = new EventEmitter();
 
 }

@@ -7,7 +7,7 @@ import { startOfMonth, startOfWeek, startOfDay, endOfMonth, endOfWeek, endOfDay,
 import { map } from 'rxjs/operators';
 import { colors } from './../../shared/utils/colors';
 import { ChangeDetectionStrategy } from '@angular/core';
-
+import {} from '@'
 @Component({
     selector: 'app-calendar',
     templateUrl: './calendar.component.html',

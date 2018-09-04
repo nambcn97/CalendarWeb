@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Film } from './../../shared/model/film';
 import { CalendarEvent } from 'angular-calendar';
@@ -7,7 +7,7 @@ import { startOfMonth, startOfWeek, startOfDay, endOfMonth, endOfWeek, endOfDay,
 import { map } from 'rxjs/operators';
 import { colors } from './../../shared/utils/colors';
 import { ChangeDetectionStrategy } from '@angular/core';
-import {} from '@'
+
 @Component({
     selector: 'app-calendar',
     templateUrl: './calendar.component.html',
@@ -24,6 +24,11 @@ export class CalendarComponent implements OnInit {
     constructor(private http: HttpClient) { }
 
     ngOnInit() {
+        this.fetchEvents();
+    }
+
+    setView(view: string): void {
+        this.view = view;
         this.fetchEvents();
     }
 
@@ -76,10 +81,7 @@ export class CalendarComponent implements OnInit {
         { date, events }: { date: Date, events: Array<CalendarEvent<{ film: Film }>> }
     ): void {
         if (isSameMonth(date, this.viewDate)) {
-            if (
-                (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-                events.length === 0
-            ) {
+            if ((isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) || events.length === 0) {
                 this.activeDayIsOpen = false;
             } else {
                 this.activeDayIsOpen = true;
@@ -94,5 +96,10 @@ export class CalendarComponent implements OnInit {
             '_blank'
         );
     }
+    @Input() locale: string = 'en';
+
+    @Output() viewChange: EventEmitter<string> = new EventEmitter();
+
+    @Output() viewDateChange: EventEmitter<Date> = new EventEmitter();
 
 }

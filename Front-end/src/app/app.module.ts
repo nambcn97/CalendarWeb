@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md'
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
@@ -13,11 +14,12 @@ import { SampleComponent } from './components/sample/sample.component';
     AppComponent,
     CalendarComponent,
     NavbarComponent,
-    SampleComponent
+    SampleComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,    
     CalendarModule.forRoot(),
     MDBBootstrapModule.forRoot()
   ],

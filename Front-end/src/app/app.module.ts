@@ -8,6 +8,10 @@ import { CalendarModule } from 'angular-calendar';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SampleComponent } from './components/sample/sample.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { Sample1Component } from './sample1/sample1.component';
+import { Sample2Component } from './sample2/sample2.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +19,9 @@ import { SampleComponent } from './components/sample/sample.component';
     CalendarComponent,
     NavbarComponent,
     SampleComponent,
+    Sample1Component,
+    Sample2Component,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,8 @@ import { SampleComponent } from './components/sample/sample.component';
     BrowserAnimationsModule,    
     CalendarModule.forRoot(),
     MDBBootstrapModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],

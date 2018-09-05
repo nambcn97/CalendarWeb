@@ -15,11 +15,11 @@ class Summary extends Migration
     {
         Schema::create('summary', function (Blueprint $table) {
             $table->datetime('Date_of_event')->index();
-            $table->foreign('Date_of_Event')->references('Date_of_event')->on('events');
+            
             $table->string('Name_of_Event');
-            $table->foreign('Event_string')->references('name')->on('Name_of_Event');
+            
             $table->timestamps('Last_Modified');
-            $table->foreign('Last_Modified')->references('Last_Modified')->on('events');
+            
             });//
     }
 

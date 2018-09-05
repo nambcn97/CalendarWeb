@@ -8,43 +8,21 @@ import { CalendarModule } from 'angular-calendar';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SampleComponent } from './components/sample/sample.component';
-<<<<<<< HEAD
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    CalendarComponent,
-    NavbarComponent,
-    SampleComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,    
-    CalendarModule.forRoot(),
-    MDBBootstrapModule.forRoot(),
-    BrowserAnimationsModule
-  ],
-  schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
-  bootstrap: [AppComponent]
-=======
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { AdminModule } from './modules/admin/admin.module';
-import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 
 @NgModule({
     declarations: [
         AppComponent,
         CalendarComponent,
+        NavbarComponent,
         SampleComponent,
-        HomeComponent,
-        NavbarComponent
+        HomeComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
+        BrowserAnimationsModule,
         CalendarModule.forRoot(),
         MDBBootstrapModule.forRoot(),
         BrowserAnimationsModule,
@@ -53,6 +31,5 @@ import { HomeComponent } from './components/home/home.component';
     schemas: [NO_ERRORS_SCHEMA],
     providers: [],
     bootstrap: [AppComponent]
->>>>>>> admin
 })
 export class AppModule { }

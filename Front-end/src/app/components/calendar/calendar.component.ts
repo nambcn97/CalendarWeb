@@ -96,10 +96,5 @@ export class CalendarComponent implements OnInit {
             '_blank'
         );
     }
-    @Input() locale: string = 'en';
-
-    @Output() viewChange: EventEmitter<string> = new EventEmitter();
-
-    @Output() viewDateChange: EventEmitter<Date> = new EventEmitter();
 
 }

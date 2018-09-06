@@ -9,6 +9,7 @@ const adminRoutes: Routes = [
         path: '',
         component: AdminComponent,
         children: [
+            { path: '', redirectTo: 'events', pathMatch: 'full' },
             { path: 'users', component: UserComponent },
             { path: 'events', component: EventComponent }
         ]

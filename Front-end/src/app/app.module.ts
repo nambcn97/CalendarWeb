@@ -10,6 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SampleComponent } from './components/sample/sample.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +19,9 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
         CalendarComponent,
         NavbarComponent,
         SampleComponent,
-        HomeComponent
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent
     ],
     imports: [
         BrowserModule,

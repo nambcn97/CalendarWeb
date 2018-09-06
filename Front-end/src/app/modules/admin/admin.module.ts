@@ -9,12 +9,16 @@ import { EventComponent } from '../../components/admin/event/event.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { SideBarComponent } from '../../components/admin/side-bar/side-bar.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { FlatpickrModule } from "angularx-flatpickr";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
         CommonModule,
         MDBBootstrapModule.forRoot(),
-        AdminRoutingModule
+        AdminRoutingModule,
+        FlatpickrModule.forRoot(),
+        FormsModule
     ],
     declarations: [
         AdminComponent,

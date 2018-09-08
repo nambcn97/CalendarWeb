@@ -18,5 +18,9 @@ class Events extends Model
     	$this->hasMany('App\Time');
     }
 
+    protected $fillable = [
 
+        'name', 'description','date_of_event','location','is_Active',
+
+    ];
 }

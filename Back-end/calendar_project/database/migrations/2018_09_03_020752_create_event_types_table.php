@@ -15,10 +15,11 @@ class CreateEventTypesTable extends Migration
     {
         Schema::create('event_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('event_type_id');
             $table->string('name');
             $table->text('description');
             $table->string('color');
-            $table->boolean('Is_Active');
+            $table->boolean('is_Active');
             $table->timestamps();
         });
     }

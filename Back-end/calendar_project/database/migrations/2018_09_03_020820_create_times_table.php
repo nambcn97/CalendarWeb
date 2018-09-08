@@ -14,10 +14,9 @@ class CreateTimesTable extends Migration
     public function up()
     {
         Schema::create('times', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
-            $table->string('Name_of_Event');
-            
-            $table->datetime('Date_of_event')->index();
+            $table->increments('id');
+            $table->string('name_of_event');
+            $table->datetime('date_of_event');
             
             $table->timestamps();
         });

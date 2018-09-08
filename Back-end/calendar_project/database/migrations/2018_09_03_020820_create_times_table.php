@@ -16,8 +16,7 @@ class CreateTimesTable extends Migration
         Schema::create('times', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name_of_event');
-            $table->datetime('date_of_event');
-            
+            $table->datetime('date_of_event'); 
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
+            $table->integer('event_type_id');
             $table->datetime('date_of_event');
             $table->datetime('creation_date');
             $table->datetime('last_modified');

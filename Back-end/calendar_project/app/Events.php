@@ -19,4 +19,10 @@ class Events extends Model
     }
 
 
+    protected $fillable = [
+
+        'name', 'description','date_of_event','location',
+
+    ];
+
 }

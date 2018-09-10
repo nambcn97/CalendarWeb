@@ -10,5 +10,10 @@ class EventType extends Model
     {
     	return $this->hasMany('App\Events');
     }
-    //
+
+    protected $fillable = [
+
+        'name', 'description','color',
+
+    ];
 }

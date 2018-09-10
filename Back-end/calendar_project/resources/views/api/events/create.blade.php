@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Test Forms</title>
+    <title>Testing CRUD</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -12,23 +13,32 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-    <form>
+    <form method="POST" action="{{ action('EventController@store') }}">
+      @csrf
   <div class="form-group">
-    <label for="exampleFormControlInput1"></label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    
+    <label for="name">Name</label>
+    <input type="text" class="form-control" placeholder="name" name="name">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" placeholder="Description of event" name="description">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="date_of_event">Date of Event</label>
+    <input type="date" class="form-control" placeholder="date" name="date_of_event">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" placeholder="location" name="location">
+  <label for="is_Active">Still ongoing?</label>
+  <select name="is_Active" class="form-control">
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select> 
   </div>
+
+  <input type="submit" class="btn btn-info" value="Submit Button">
 </form>
 </div>
 </div>

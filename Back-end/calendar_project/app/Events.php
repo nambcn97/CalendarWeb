@@ -10,7 +10,7 @@ class Events extends Model
     const UPDATED_AT = "Last_Modified";//
 
     public function event_type(){
-    	return $this->belongsTo('App\EventsType');
+    	return $this->belongsTo('App\EventsType','events_event_type','event_id','event_type_id');
     }
 
 
@@ -18,5 +18,11 @@ class Events extends Model
     	$this->hasMany('App\Time');
     }
 
+
+    protected $fillable = [
+
+        'name', 'description','date_of_event','location',
+
+    ];
 
 }

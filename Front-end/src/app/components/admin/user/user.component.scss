@@ -1,3 +1,16 @@
 td, th{
     vertical-align: middle
 }
+.action-btn {
+    position: relative;
+    display: inline-flex;
+}
+.action-btn .fa {
+    font-size: 20px;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+}
+.action-btn .btn {
+    padding: 10px;
+}

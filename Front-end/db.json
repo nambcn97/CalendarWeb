@@ -1,0 +1,245 @@
+{
+    "events": {
+        "success": true,
+        "data": [
+            {
+                "id": 1,
+                "name": "Convocation",
+                "description": "Day for graduated",
+                "start": "2018-09-14 00:00:00",
+                "end": "2018-09-16 00:00:00",
+                "color": "yellow",
+                "location": "FPT Nanoversity",
+                "is_Active": 1
+            },
+            {
+                "id": 2,
+                "name": "National Day",
+                "description": "Day for country",
+                "start": "2018-09-01 00:00:00",
+                "end": "2018-09-03 00:00:00",
+                "color": "red",
+                "location": "All regions in Vietnam",
+                "is_Active": 1
+            },
+            {
+                "id": 3,
+                "name": "Celebration",
+                "description": "Day for celebration",
+                "start": "2018-09-10 00:00:00",
+                "end": "2018-09-20 00:00:00",
+                "color": "green",
+                "location": "FPT Corporations",
+                "is_Active": 1
+            }
+        ],
+        "message": "Events retrieved successfully."
+    },
+    "users": {
+        "success": true,
+        "data": [
+            {
+                "id": 1,
+                "name": "anndh2",
+                "email": "anndh2@gmail.com.vn",
+                "role": "admin",
+                "created_at": "2018-09-15 06:33:41",
+                "updated_at": "2018-09-15 06:33:41"
+            },
+            {
+                "id": 2,
+                "name": "huynh",
+                "email": "huynh@gmail.com",
+                "role": "admin",
+                "created_at": "2018-09-15 06:37:00",
+                "updated_at": "2018-09-15 06:37:00"
+            },
+            {
+                "id": 3,
+                "name": "snowfox1991",
+                "email": "nguyenhuy@gmail.com",
+                "role": "user",
+                "created_at": "2018-09-15 06:40:32",
+                "updated_at": "2018-09-15 06:40:32"
+            },
+            {
+                "id": 5,
+                "name": "nguyenhochuy",
+                "email": "nguyenhochuy@gmail.com",
+                "role": "user",
+                "created_at": "2018-09-16 06:43:21",
+                "updated_at": "2018-09-16 06:43:21"
+            },
+            {
+                "id": 6,
+                "name": "Bui Cong Nam 123",
+                "email": "nambcn97@gmail.com",
+                "role": "admin",
+                "created_at": "2018-09-16 06:50:05",
+                "updated_at": "2018-09-16 12:52:32"
+            },
+            {
+                "id": 7,
+                "name": "admin_manager",
+                "email": "admin@gmail.com",
+                "role": "admin",
+                "created_at": "2018-09-16 08:42:10",
+                "updated_at": "2018-09-16 08:42:10"
+            }
+        ],
+        "message": "Users retrieved successfully."
+    },
+    "login": {
+        "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImY5NmQ0Nzc5NmQ4NzI4MzkxOGE1YjkxZjFkMWJlNGE4NGM0MWE1MzJhYzMyYmIwZThjMGQ4ZDFkMjlhMmY3YjcxNTg0ZmVlY2E3NGI2ZTgxIn0.eyJhdWQiOiIxIiwianRpIjoiZjk2ZDQ3Nzk2ZDg3MjgzOTE4YTViOTFmMWQxYmU0YTg0YzQxYTUzMmFjMzJiYjBlOGMwZDhkMWQyOWEyZjdiNzE1ODRmZWVjYTc0YjZlODEiLCJpYXQiOjE1MzcxMDQ1NTUsIm5iZiI6MTUzNzEwNDU1NSwiZXhwIjoxNTY4NjQwNTU1LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.EZupqQTcRiUXluIrsLHdB7PhXqXINCAC41LRRqcUAakIG3feckTjLjMsMlLRxZKI4xxWAdPlfMsa0C2UZWUkEBhJSIxuMwfOvcSFlUtCdoG6zVK-_6ZiS3z19pkMS33xFyzxZjIzAuD5imi48lYh5h5YZYOBfj79mRLQSVCYQYO0sgMHcF07YdBYiOopJOwnxtJgjUVdnuknunHtypeKMFbT8x7Mvaj60Na_tdbLVRub_oZGCRohbGQC-LFHN2SUhMi0Jpqi3X9EKndYiW3OBXvAznJiHTziCi1o12WYFFPrRrkTs6hBhmHpcJihvBZjmsueyBTORJ6SisbdhcDrQ_jkZju3zty1YLWU8-mfl7hQbHXQ_Sffd8i8PcJYaBNgl10PaOinY5vipqdRCIxhbcUNgVSOr21Kz7WZaaTQ24bT6Tfh--oIuGB7I-YKPrgil02mNkFSe0WRtij8Ytq4QOpH-ivE4dED0SBP0vpHDuV_xRzqQiFQIINYBxUcRS6TXyvmj2xfatBW-PSQSEW0BXJEOtQC32FeRo5GPQFRy2xQqYEAfCxIvxwBWhLhFtx_zyivxVfMQbX_TZTxHCzGEVhKLlM5yOrFl2nxVQDOxF2m-eY_d0LJ-wAu33H6Wz6r-6vv_hwNCxn-zXOYfDKjDqWeEi-Apdvt5i-tU7KfdXc",
+        "token_type": "Bearer",
+        "expires_at": "2019-09-16 13:29:15",
+        "user": {
+            "name": "Bui Cong Nam 123",
+            "email": "nambcn97@gmail.com",
+            "role": "user"
+        }
+    },
+    "signupfail": {
+        "message": "The given data was invalid.",
+        "errors": {
+            "email": ["The email has already been taken.", "The password confirmation does not match."]
+        }
+    },
+    "signup": {
+        "message": "Successfully created user!"
+    },
+    "adduser": {
+        "success": true,
+        "data": {
+            "name": "add user",
+            "email": "newuser@gmail.com",
+            "role": "user",
+            "updated_at": "2018-09-16 13:32:35",
+            "created_at": "2018-09-16 13:32:35",
+            "id": 9
+        },
+        "message": "User created successfully."
+    },
+    "update-user-fail": {
+        "success": false,
+        "message": "Validation Error.",
+        "data": {
+            "name": ["The name field is required."],
+            "email": ["The email field is required."],
+            "role": ["The role field is required."]
+        }
+    },
+    "update-user": {
+        "success": true,
+        "data": {
+            "id": 9,
+            "name": "add user",
+            "email": "newuser@gmail.com",
+            "role": "user",
+            "created_at": "2018-09-16 13:32:35",
+            "updated_at": "2018-09-16 13:32:35"
+        },
+        "message": "User updated successfully."
+    },
+    "delete": {
+        "success": true,
+        "data": "9",
+        "message": "Tag deleted successfully."
+    },
+    "add-event": {
+        "success": true,
+        "data": {
+            "name": "National Day",
+            "description": "Day for country",
+            "start": "2018-09-02 00:00:00",
+            "end": "2018-09-02 12:00:00",
+            "location": "All ...",
+            "is_Active": 1,
+            "event_type_id": 1,
+            "last_modified": "2018-09-16 13:36:41",
+            "creation_date": "2018-09-16 13:36:41",
+            "id": 9
+        },
+        "message": "Event created successfully."
+    },
+    "update-event": {
+        "success": true,
+        "data": [
+            {
+                "id": 9,
+                "name": "National Day",
+                "description": "Day for country",
+                "start": "2018-09-02 00:00:00",
+                "end": "2018-09-02 12:00:00",
+                "color": "#ff0000",
+                "location": "All ...",
+                "is_Active": 1
+            }
+        ],
+        "message": "Events updated successfully."
+    },
+    "event_type": {
+        "success": true,
+        "data": [
+            {
+                "id": 1,
+                "name": "Convocation",
+                "description": "Day for graduated",
+                "color": "#ff0000",
+                "is_Active": 1,
+                "created_at": "2018-09-15 06:24:54",
+                "updated_at": "2018-09-15 06:24:54"
+            },
+            {
+                "id": 2,
+                "name": "Seminar",
+                "description": "Day for presentation",
+                "color": "#7DFF33",
+                "is_Active": 1,
+                "created_at": "2018-09-15 06:25:17",
+                "updated_at": "2018-09-15 06:25:17"
+            },
+            {
+                "id": 3,
+                "name": "National Day",
+                "description": "Day for country",
+                "color": "#800000",
+                "is_Active": 1,
+                "created_at": "2018-09-15 06:29:33",
+                "updated_at": "2018-09-15 06:29:33"
+            },
+            {
+                "id": 4,
+                "name": "Celebration",
+                "description": "Day for celebration",
+                "color": "#004000",
+                "is_Active": 1,
+                "created_at": "2018-09-15 06:30:02",
+                "updated_at": "2018-09-15 06:30:02"
+            },
+            {
+                "id": 5,
+                "name": "National Cutural Association",
+                "description": "Hội văn hóa Dân Tộc",
+                "color": "#0080ff",
+                "is_Active": 1,
+                "created_at": "2018-09-16 09:23:06",
+                "updated_at": "2018-09-16 10:09:00"
+            }
+        ],
+        "message": "Event type retrieved successfully."
+    },
+    "add-event-type": {
+        "success": true,
+        "data": {
+            "name": "National Cutural Association",
+            "description": "Hội văn hóa Dân Tộc",
+            "color": "#0080ff",
+            "is_Active": 1,
+            "updated_at": "2018-09-16 13:40:17",
+            "created_at": "2018-09-16 13:40:17",
+            "id": 6
+        },
+        "message": "Event type created successfully."
+    }
+}

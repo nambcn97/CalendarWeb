@@ -26,6 +26,7 @@
     "angular5-csv": "^0.2.10",
     "angularx-flatpickr": "^6.0.0",
     "chart.js": "^2.5.0",
+    "color": "^3.0.0",
     "core-js": "^2.5.4",
     "date-fns": "^1.29.0",
     "flatpickr": "^4.5.2",

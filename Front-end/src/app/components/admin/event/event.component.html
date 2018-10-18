@@ -25,29 +25,35 @@
             <tr *ngFor="let event of events; let index = index">
                 <th scope="row">{{index + 1}}</th>
                 <td>
-                    <input type="text" class="form-control" [(ngModel)]="event.title" (keyup)="refresh.next()">
+                    <input type="text" class="form-control" [(ngModel)]="event.name" (keyup)="refresh.next()"
+                        [disabled]="isDisable ? isDisable[index] : true">
                 </td>
                 <td>
-                    <input type="color" [(ngModel)]="event.color.primary" (change)="refresh.next()">
-                </td>
-                <!-- <td>
-        <input
-          type="color"
-          [(ngModel)]="event.color.secondary"
-          (change)="refresh.next()">
-      </td> -->
-                <td>
-                    <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.start" (ngModelChange)="refresh.next()" [altInput]="true"
-                        [convertModelValue]="true" [enableTime]="true" dateFormat="Y-m-dTH:i" altFormat="F j, Y H:i" placeholder="Not set">
+                    <input type="color" [(ngModel)]="event.color" (change)="refresh.next()" [disabled]="isDisable ? isDisable[index] : true">
                 </td>
                 <td>
-                    <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.end" (ngModelChange)="refresh.next()" [altInput]="true"
-                        [convertModelValue]="true" [enableTime]="true" dateFormat="Y-m-dTH:i" altFormat="F j, Y H:i" placeholder="Not set">
+                    <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.start" (ngModelChange)="refresh.next()"
+                        [altInput]="true" [convertModelValue]="true" [enableTime]="true" dateFormat="Y-m-dTH:i"
+                        altFormat="F j, Y H:i" placeholder="Not set" [disabled]="isDisable ? isDisable[index] : true">
                 </td>
                 <td>
-                    <button mdbBtn size="sm" mdbWavesEffect type="button" class="btn btn-danger" (click)="events.splice(index, 1); refresh.next()">
-                        Delete
-                    </button>
+                    <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.end" (ngModelChange)="refresh.next()"
+                        [altInput]="true" [convertModelValue]="true" [enableTime]="true" dateFormat="Y-m-dTH:i"
+                        altFormat="F j, Y H:i" placeholder="Not set" [disabled]="isDisable ? isDisable[index] : true">
+                </td>
+                <td>
+                    <div class="action-btn">
+                        <button *ngIf="isDisable[index]" mdbWavesEffect type="button" class="btn btn-primary" (click)="isDisable[index] = false; refresh.next()">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button *ngIf="!isDisable[index]" mdbWavesEffect type="button" class="btn btn-success" (click)="updateEvent(event.id); refresh.next()">
+                            <i class="fa fa-check"></i>
+                        </button>
+                        <button mdbBtn mdbWavesEffect type="button" class="btn btn-danger" (click)="deleteEvent(event.id); refresh.next()">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </div>
+
                 </td>
             </tr>
         </tbody>

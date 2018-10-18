@@ -1,6 +1,6 @@
 <h3 class="mt-3">
     <span style="vertical-align: -webkit-baseline-middle"> Edit users </span>
-    <button class="btn btn-primary pull-right" (click)="addEvent()">
+    <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#addUserModal">
         Add new
     </button>
     <div class="clearfix"></div>
@@ -12,9 +12,9 @@
         <thead class="grey lighten-2">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col" class="th-lg">Fullname</th>
-                <th scope="col" class="th-lg">Username</th>
-                <th scope="col" class="th-lg">Password</th>
+                <th scope="col" class="th-lg">Name</th>
+                <th scope="col" class="th-lg">Email</th>
+                <th scope="col" class="th-lg">Role</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -23,22 +23,79 @@
             <tr *ngFor="let user of users; let index = index">
                 <th scope="row">{{index + 1}}</th>
                 <td>
-                    <input type="text" class="form-control" [(ngModel)]="user.fullname" (keyup)="refresh.next()">
+                    <input type="text" class="form-control" [(ngModel)]="user.name" (keyup)="refresh.next()" [disabled]="isDisable? isDisable[index] : true">
                 </td>
                 <td>
-                    <input type="text" class="form-control" [(ngModel)]="user.username" (keyup)="refresh.next()">
+                    <input type="text" class="form-control" [(ngModel)]="user.email" (keyup)="refresh.next()"
+                        [disabled]="isDisable? isDisable[index] : true">
                 </td>
                 <td>
-                    <input type="password" class="form-control" [(ngModel)]="user.password" (keyup)="refresh.next()">
+                    <input type="text" class="form-control" [(ngModel)]="user.role" (keyup)="refresh.next()" [disabled]="isDisable? isDisable[index] : true">
                 </td>
                 <td>
-                    <button mdbBtn size="sm" mdbWavesEffect type="button" class="btn btn-danger" (click)="users.splice(index, 1); refresh.next()">
-                        Delete
-                    </button>
+                    <div class="action-btn">
+                        <button *ngIf="isDisable[index]" mdbWavesEffect type="button" class="btn btn-primary" (click)="isDisable[index] = false; refresh.next()">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button *ngIf="!isDisable[index]" mdbWavesEffect type="button" class="btn btn-success" (click)="updateUser(user.id); refresh.next()">
+                            <i class="fa fa-check"></i>
+                        </button>
+                        <button mdbBtn mdbWavesEffect type="button" class="btn btn-danger" (click)="deleteUser(user.id); refresh.next()">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </div>
                 </td>
             </tr>
         </tbody>
 
     </table>
 
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add new user</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form (ngSubmit)="onSubmit()">
+                <div class="modal-body mx-3">
+
+                    <div class="md-form mb-3">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="orangeForm-name" class="active">Name</label>
+                        <input type="text" mdbActive id="orangeForm-name" [(ngModel)]="newUser.name" class="form-control validate">
+
+                    </div>
+                    <div class="md-form mb-3">
+                        <i class="fa fa-envelope prefix grey-text"></i>
+                        <input type="email" id="orangeForm-email" class="form-control validate" [(ngModel)]="newUser.email">
+                        <label data-error="wrong" data-success="right" for="orangeForm-email" class="active">Email</label>
+                    </div>
+
+                    <div class="md-form mb-3">
+                        <i class="fa fa-lock prefix grey-text"></i>
+                        <input type="password" id="orangeForm-pass" class="form-control validate" [(ngModel)]="newUser.password">
+                        <label data-error="wrong" data-success="right" for="orangeForm-pass" class="active">Password</label>
+                    </div>
+
+                    <div class="md-form mb-3">
+                        <i class="fa fa-lock prefix grey-text"></i>
+                        <input type="text" id="orangeForm-role" class="form-control validate" [(ngModel)]="newUser.role">
+                        <label data-error="wrong" data-success="right" for="orangeForm-role" class="active">Role</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-deep-orange">Add New</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
 </div>
